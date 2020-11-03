@@ -1,6 +1,6 @@
 {
   "name": "appeweb-grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple responsive grid",
   "main": "index.js",
   "author": "Michael Durand <michael.durand.md@gmail.com>",
