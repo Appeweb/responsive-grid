@@ -1,0 +1,67 @@
+
+/**
+  Variables
+ */
+$gris-columns: 12!default;
+$grid-gutter-width: 30px!default;
+
+$grid-breakpoints: (
+  xs: 0, // Extra small devices (portrait phones)
+  sm: 480, // Small devices (landscape phones)
+  md: 768, // Medium devices (tablets)
+  lg: 1024 // Large devices (desktops)
+);
+
+$container-max-width: (
+  sm: 420,
+  md: 720,
+  lg: 960
+);
+
+/**
+  Mixin
+ */
+@mixin create-breakpoint($breakpoint) {
+  @if(nth($breakpoint, 2) == 0) {
+    @content
+  } @else {
+    @media screen and (min-width: nth($breakpoint, 2) * 1px) {
+      @content
+    }
+  }
+}
+
+/**
+  Logic
+ */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@each $grid-breakpoint in $grid-breakpoints {
+  @include create-breakpoint($grid-breakpoint) {
+    .container {
+      @debug nth($grid-breakpoint, 1);
+      @if(map_get($container-max-width, nth($grid-breakpoint, 1)) == null) {
+        max-width: 100%;
+      } @else {
+        max-width: map_get($container-max-width, nth($grid-breakpoint, 1))*1px;
+      }
+      margin: 0 auto;
+
+        &-fluid {
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $gris-columns {
+  .col-#{$i} {
+    flex-basis: (100 / ($gris-columns / $i)) * 1%;
+  }
+}

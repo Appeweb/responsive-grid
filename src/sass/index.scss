@@ -1,0 +1,29 @@
+@import "variables";
+@import "grid";
+@import "marge";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #a8afb2;
+  height: 50px;
+}
+
+
+@for $i from 1 through 20 {
+  .col-#{$i} {
+    height: 20px;
+    text-align: center;
+    border: 1px solid lightgray;
+    background-color: aqua;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+}

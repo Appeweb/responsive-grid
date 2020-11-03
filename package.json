@@ -1,0 +1,14 @@
+{
+  "name": "grid",
+  "version": "0.0.1",
+  "description": "Simple responsive grid",
+  "main": "index.js",
+  "author": "Michael Durand (Appeweb)",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch ./src/sass:./public/css",
+    "prefix": "postcss ./public/css/*.css --use autoprefixer -d ./public/css"
+  },
+  "dependencies": {},
+  "browserslist": "last 4 versions"
+}
