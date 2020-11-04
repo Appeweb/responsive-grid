@@ -1,5 +1,0 @@
-@for $i from 1 through 10 {
-  .m-#{$i} {
-    margin: $i * 0.5rem;
-  }
-}
