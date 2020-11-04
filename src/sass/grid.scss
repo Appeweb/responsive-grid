@@ -41,21 +41,20 @@ $container-max-width: (
   width: 100%;
 }
 
+.container-fluid {
+  max-width: 100%;
+  margin: 0;
+}
+
 @each $grid-breakpoint in $grid-breakpoints {
   @include create-breakpoint($grid-breakpoint) {
     .container {
-      @debug nth($grid-breakpoint, 1);
       @if(map_get($container-max-width, nth($grid-breakpoint, 1)) == null) {
         max-width: 100%;
       } @else {
         max-width: map_get($container-max-width, nth($grid-breakpoint, 1))*1px;
       }
       margin: 0 auto;
-
-        &-fluid {
-        max-width: 100%;
-        margin: 0;
-      }
     }
   }
 }
