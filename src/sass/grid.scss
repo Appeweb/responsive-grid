@@ -64,3 +64,16 @@ $container-max-width: (
     flex-basis: (100 / ($gris-columns / $i)) * 1%;
   }
 }
+
+@each $grid-breakpoint in $grid-breakpoints {
+  @include create-breakpoint($grid-breakpoint) {
+    @if(nth($grid-breakpoint, 2) != 0) {
+      @for $i from 1 through $gris-columns {
+        .col-#{nth($grid-breakpoint, 1)}-#{$i} {
+          flex-basis: (100 / ($gris-columns / $i)) * 1%;
+        }
+      }
+    }
+  }
+}
+
