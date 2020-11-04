@@ -1,23 +1,4 @@
-
-/**
-  Variables
- */
-$gris-columns: 12!default;
-$grid-gutter-width: 30px!default;
-
-$grid-breakpoints: (
-  xs: 0, // Extra small devices (portrait phones)
-  sm: 480, // Small devices (landscape phones)
-  md: 768, // Medium devices (tablets)
-  lg: 1024 // Large devices (desktops)
-);
-
-$container-max-width: (
-  sm: 420,
-  md: 720,
-  lg: 960
-);
-
+@import "variables";
 /**
   Mixin
  */
