@@ -1,6 +1,6 @@
 {
   "name": "appeweb-grid",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Simple responsive grid",
   "main": "index.js",
   "author": "Michael Durand <michael.durand.md@gmail.com>",
@@ -10,7 +10,7 @@
     "type": "git"
   },
   "scripts": {
-    "sass": "sass --watch ./src/sass:./public/css",
+    "sass": "sass --watch ./src/sass:./dist/css",
     "prefix": "postcss dist/css/*.css --use autoprefixer -d dist/css"
   },
   "dependencies": {},
